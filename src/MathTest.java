@@ -106,7 +106,7 @@ public class MathTest {
     })
     public void testNestedPowers(double base, double a, double b) {
 
-
+        assertEquals(Math.pow(Math.pow(base, a), b), Math.pow(base, a*b));
 
     }
 
@@ -115,7 +115,7 @@ public class MathTest {
     @ValueSource(doubles = {1, 5.0, 3.7, -1, -4.0, -4.9})
     public void testZeroPower(double base) {
 
-
+        assertEquals(1, Math.pow(base, 0));
 
     }
 
